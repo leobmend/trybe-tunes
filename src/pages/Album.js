@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
 import AlbumCard from '../components/AlbumCard';
 import MusicCard from '../components/MusicCard';
+import Loading from '../components/Loading';
 
 class Album extends React.Component {
   constructor() {
@@ -11,6 +12,7 @@ class Album extends React.Component {
     this.state = {
       albumInfo: {},
       musics: [],
+      loading: true,
     };
   }
 
@@ -20,27 +22,30 @@ class Album extends React.Component {
       this.setState({
         albumInfo: results[0],
         musics: results.slice(1),
+        loading: false,
       });
     });
   }
 
   render() {
-    const { albumInfo, musics } = this.state;
+    const { albumInfo, musics, loading } = this.state;
     return (
       <div data-testid="page-album">
         <Header />
-        <main>
-          <AlbumCard album={ albumInfo } />
-          <div>
-            {musics.map(({ trackId, trackName, previewUrl }) => (
-              <MusicCard
-                key={ trackId }
-                music={ { trackName, previewUrl } }
-              />
-            ))}
-          </div>
-        </main>
-
+        {loading
+          ? <Loading />
+          : (
+            <main>
+              <AlbumCard album={ albumInfo } />
+              <div>
+                {musics.map(({ trackId, trackName, previewUrl }) => (
+                  <MusicCard
+                    key={ trackId }
+                    music={ { trackName, previewUrl } }
+                  />
+                ))}
+              </div>
+            </main>)}
       </div>
     );
   }
