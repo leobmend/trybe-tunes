@@ -5,6 +5,7 @@ import getMusics from '../services/musicsAPI';
 import AlbumCard from '../components/AlbumCard';
 import MusicCard from '../components/MusicCard';
 import Loading from '../components/Loading';
+import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 class Album extends React.Component {
   constructor() {
@@ -13,22 +14,44 @@ class Album extends React.Component {
       albumInfo: {},
       musics: [],
       loading: true,
+      favoriteSongs: [],
     };
+
+    this.updateFavorites = this.updateFavorites.bind(this);
   }
 
   componentDidMount() {
     const { match: { params: { id } } } = this.props;
-    getMusics(id).then((results) => {
-      this.setState({
-        albumInfo: results[0],
-        musics: results.slice(1),
-        loading: false,
+    getMusics(id).then((musicsResults) => {
+      getFavoriteSongs().then((favoriteResults) => {
+        this.setState({
+          albumInfo: musicsResults[0],
+          musics: musicsResults.slice(1),
+          favoriteSongs: favoriteResults,
+          loading: false,
+        });
+      });
+    });
+  }
+
+  // Callback é fornecida pelo Component MusicCard, a depender se
+  // o imput foi marcado ou desmarcado.
+  updateFavorites(music, callback) {
+    this.setState({
+      loading: true,
+    }, () => {
+      callback(music).then(async () => {
+        const newFavoriteSongs = await getFavoriteSongs();
+        this.setState({
+          favoriteSongs: newFavoriteSongs,
+          loading: false,
+        });
       });
     });
   }
 
   render() {
-    const { albumInfo, musics, loading } = this.state;
+    const { albumInfo, musics, favoriteSongs, loading } = this.state;
     return (
       <div data-testid="page-album">
         <Header />
@@ -38,12 +61,17 @@ class Album extends React.Component {
             <main>
               <AlbumCard album={ albumInfo } />
               <div>
-                {musics.map(({ trackId, trackName, previewUrl }) => (
-                  <MusicCard
-                    key={ trackId }
-                    music={ { trackName, previewUrl } }
-                  />
-                ))}
+                {musics.map((music) => {
+                  const isFavorite = favoriteSongs.some(({ trackId }) => (
+                    trackId === music.trackId));
+                  return (
+                    <MusicCard
+                      key={ music.trackId }
+                      music={ music }
+                      updateFavorites={ this.updateFavorites }
+                      isFavorite={ isFavorite }
+                    />);
+                })}
               </div>
             </main>)}
       </div>
