@@ -119,6 +119,9 @@ ProfileEdit.propTypes = {
   history: PropTypes.objectOf(oneOfType([
     PropTypes.object,
     PropTypes.string,
+    PropTypes.number,
+    PropTypes.func,
+    PropTypes.bool,
   ])).isRequired,
 };
 
