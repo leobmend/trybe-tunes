@@ -33,6 +33,7 @@ class MusicCard extends React.Component {
           Favorita
           <input
             type="checkbox"
+            id={ trackId }
             checked={ isFavorite }
             data-testid={ `checkbox-music-${trackId}` }
             onChange={ this.handleChange }
@@ -50,7 +51,11 @@ MusicCard.propTypes = {
     PropTypes.bool,
   ])).isRequired,
   updateFavorites: PropTypes.func.isRequired,
-  isFavorite: PropTypes.bool.isRequired,
+  isFavorite: PropTypes.bool,
+};
+
+MusicCard.defaultProps = {
+  isFavorite: true,
 };
 
 export default MusicCard;
