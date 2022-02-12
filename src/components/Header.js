@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
-import earphoneImg from '../images/earphone.svg';
+import earphonesImg from '../images/earphones.svg';
 import defaultProfilePic from '../images/default-profile.svg';
 
 class Header extends React.Component {
@@ -35,7 +35,7 @@ class Header extends React.Component {
           <h1>trybe</h1>
           <img
             className="earphone-img"
-            src={ earphoneImg }
+            src={ earphonesImg }
             alt="Fones de ouvido"
           />
           <h1>tunes</h1>
