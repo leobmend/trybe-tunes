@@ -21,7 +21,7 @@ class MusicCard extends React.Component {
   render() {
     const { music: { trackName, previewUrl, trackId }, isFavorite } = this.props;
     return (
-      <div>
+      <div className="music-card">
         <p>{trackName}</p>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />

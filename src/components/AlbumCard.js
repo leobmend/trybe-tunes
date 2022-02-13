@@ -7,8 +7,10 @@ class AlbumCard extends React.Component {
     return (
       <div className="album-card">
         <img src={ artworkUrl100 } alt={ `${collectionName} artwork` } />
-        <h3 data-testid="album-name">{collectionName}</h3>
-        <p data-testid="artist-name">{artistName}</p>
+        <div className="album-texts">
+          <h3 data-testid="album-name">{collectionName}</h3>
+          <p data-testid="artist-name">{artistName}</p>
+        </div>
       </div>
     );
   }

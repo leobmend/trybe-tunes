@@ -53,14 +53,16 @@ class Album extends React.Component {
   render() {
     const { albumInfo, musics, favoriteSongs, loading } = this.state;
     return (
-      <div data-testid="page-album">
+      <main data-testid="page-album">
         <Header />
         {loading
           ? <Loading />
           : (
-            <main>
-              <AlbumCard album={ albumInfo } />
-              <div>
+            <main className="album">
+              <div className="album-container">
+                <AlbumCard album={ albumInfo } />
+              </div>
+              <div className="music-board">
                 {musics.map((music) => {
                   const isFavorite = favoriteSongs.some(({ trackId }) => (
                     trackId === music.trackId));
@@ -74,7 +76,7 @@ class Album extends React.Component {
                 })}
               </div>
             </main>)}
-      </div>
+      </main>
     );
   }
 }

@@ -1,12 +1,10 @@
 * {
   box-sizing: border-box;
+  color: black;
   font-size: 10px;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: #1b4332;
+  text-decoration: none;
 }
 
 input {
@@ -114,7 +112,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 10px 0;
+  padding: 25px 0;
 }
 
 .title-container h1 {
@@ -139,6 +137,7 @@ header {
 }
 
 .user-container h2 {
+  color: white;
   font-size: 2.3em;
 }
 
@@ -151,6 +150,7 @@ header {
 }
 
 .user-container .loading {
+  color: white;
   font-size: 2.3em;
   height: 100px;
   margin: 10px 30px;
@@ -177,6 +177,7 @@ header {
 /* SEARCH */
 .search {
   align-items: center;
+  background-color: white;
   display: flex;
   flex-direction: column;
 }
@@ -205,25 +206,92 @@ header {
   margin-left: 10px;
 }
 
+.search .loading {
+  font-size: 3em;
+}
+
 .albums-board {
   align-items: center;
-  border: 2px solid white;
+  border: 5px solid #1b4332;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
   padding: 20px;
-  width: 90vw;
+  width: 95vw;
 }
 
 .albums-board h2 {
-  color: white;
-  flex-basis: 100%;
+  background-color: rgb(225, 225, 225);
+  border-radius: 5px;
+  flex-basis: 90%;
   font-size: 3em;
   margin: 40px;
+  padding: 20px;
   text-align: center;
 }
 
 .album-card {
-  margin: 5px;
-  width: 150px;
+  background-color: rgb(225, 225, 225);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 290px;
+  margin: 15px 25px;
+  width: 230px;
+}
+
+.album-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+}
+
+.album-card .album-texts {
+  margin: auto;
+  text-align: center;
+}
+
+.album-card .album-texts h3 {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+/* ALBUM */
+.album {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  width: 100vw;
+}
+
+.album .album-container {
+  display: flex;
+  width: 30%;
+}
+
+.album .album-card {
+  margin: auto;
+}
+
+.album .music-board {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 80vh;
+  width: 70%;
+}
+
+.music-board .music-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5px auto;
+}
+
+.music-board .music-card p {
+  font-size: 1.2em;
+  margin: 2px;
+  text-align: center;
 }

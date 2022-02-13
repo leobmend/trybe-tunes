@@ -33,6 +33,7 @@ class Search extends React.Component {
       searchInput: '',
       artistSearch: searchInput,
       loading: true,
+      showResults: false,
     }), () => searchAlbumsAPI(searchInput)
       .then((response) => this.setState({
         albumsList: response,
