@@ -5,7 +5,7 @@ class AlbumCard extends React.Component {
   render() {
     const { album: { artistName, collectionName, artworkUrl100 } } = this.props;
     return (
-      <div>
+      <div className="album-card">
         <img src={ artworkUrl100 } alt={ `${collectionName} artwork` } />
         <h3 data-testid="album-name">{collectionName}</h3>
         <p data-testid="artist-name">{artistName}</p>

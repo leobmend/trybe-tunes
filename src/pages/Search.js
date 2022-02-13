@@ -47,19 +47,21 @@ class Search extends React.Component {
       albumsList, loading, showResults } = this.state;
     const searchBtnDisabled = searchInput.length < MIN_LENGTH;
     return (
-      <div data-testid="page-search">
+      <main className="search" data-testid="page-search">
         <Header />
-        <form>
+        <form className="search-form">
           <label htmlFor="searchInput">
             <input
               type="text"
               data-testid="search-artist-input"
+              placeholder="Pesquise seu artista"
               name="searchInput"
               value={ searchInput }
               onChange={ this.handleChange }
             />
           </label>
           <button
+            className="search-button"
             type="button"
             data-testid="search-artist-button"
             disabled={ searchBtnDisabled }
@@ -72,7 +74,7 @@ class Search extends React.Component {
           && <Loading />}
         {showResults
           && <AlbumsList albums={ albumsList } artistSearch={ artistSearch } />}
-      </div>
+      </main>
     );
   }
 }

@@ -7,12 +7,12 @@ class AlbumsList extends React.Component {
   render() {
     const { albums, artistSearch } = this.props;
     return (
-      <div>
+      <section className="albums-board">
         {albums.length === 0
-          ? <p>Nenhum álbum foi encontrado</p>
+          ? <h2>Nenhum álbum foi encontrado</h2>
           : (
             <>
-              <p>{`Resultado de álbuns de: ${artistSearch}`}</p>
+              <h2>{`Resultado de álbuns de: ${artistSearch}`}</h2>
               {albums.map((album) => (
                 <div key={ album.collectionId }>
                   <Link
@@ -24,7 +24,7 @@ class AlbumsList extends React.Component {
                 </div>
               ))}
             </>)}
-      </div>
+      </section>
     );
   }
 }
