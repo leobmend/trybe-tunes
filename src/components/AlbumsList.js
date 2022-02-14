@@ -8,7 +8,7 @@ class AlbumsList extends React.Component {
     const { albums, artistSearch } = this.props;
     return (
       <section className="albums-board">
-        {albums.length === 0
+        {!albums.length
           ? <h2>Nenhum álbum foi encontrado</h2>
           : (
             <>
