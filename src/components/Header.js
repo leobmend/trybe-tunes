@@ -42,7 +42,7 @@ class Header extends React.Component {
         </div>
         <div className="user-container">
           {loading
-            ? <Loading />
+            ? <Loading className="user" />
             : (
               <>
                 <h2 data-testid="header-user-name">

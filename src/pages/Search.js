@@ -48,34 +48,36 @@ class Search extends React.Component {
       albumsList, loading, showResults } = this.state;
     const searchBtnDisabled = searchInput.length < MIN_LENGTH;
     return (
-      <main className="search" data-testid="page-search">
+      <>
         <Header />
-        <form className="search-form">
-          <label htmlFor="searchInput">
-            <input
-              type="text"
-              data-testid="search-artist-input"
-              placeholder="Pesquise seu artista"
-              name="searchInput"
-              value={ searchInput }
-              onChange={ this.handleChange }
-            />
-          </label>
-          <button
-            className="search-button"
-            type="button"
-            data-testid="search-artist-button"
-            disabled={ searchBtnDisabled }
-            onClick={ this.handleClick }
-          >
-            Buscar
-          </button>
-        </form>
-        {loading
-          && <Loading />}
-        {showResults
-          && <AlbumsList albums={ albumsList } artistSearch={ artistSearch } />}
-      </main>
+        <main className="search" data-testid="page-search">
+          <form className="search-form">
+            <label htmlFor="searchInput">
+              <input
+                type="text"
+                data-testid="search-artist-input"
+                placeholder="Pesquise seu artista"
+                name="searchInput"
+                value={ searchInput }
+                onChange={ this.handleChange }
+              />
+            </label>
+            <button
+              className="search-button"
+              type="button"
+              data-testid="search-artist-button"
+              disabled={ searchBtnDisabled }
+              onClick={ this.handleClick }
+            >
+              Buscar
+            </button>
+          </form>
+          {loading
+            && <Loading className="search" />}
+          {showResults
+            && <AlbumsList albums={ albumsList } artistSearch={ artistSearch } />}
+        </main>
+      </>
     );
   }
 }

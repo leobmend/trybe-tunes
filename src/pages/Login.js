@@ -22,7 +22,7 @@ class Login extends React.Component {
         <div className="login-container">
           <h1>Login</h1>
           {loading
-            ? <Loading />
+            ? <Loading className="login" />
             : (
               <form className="login-form">
                 <label htmlFor="userName">

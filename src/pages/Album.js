@@ -53,30 +53,32 @@ class Album extends React.Component {
   render() {
     const { albumInfo, musics, favoriteSongs, loading } = this.state;
     return (
-      <main data-testid="page-album">
+      <>
         <Header />
-        {loading
-          ? <Loading />
-          : (
-            <main className="album">
-              <div className="album-container">
-                <AlbumCard album={ albumInfo } />
-              </div>
-              <div className="music-board">
-                {musics.map((music) => {
-                  const isFavorite = favoriteSongs.some(({ trackId }) => (
-                    trackId === music.trackId));
-                  return (
-                    <MusicCard
-                      key={ music.trackId }
-                      music={ music }
-                      updateFavorites={ this.updateFavorites }
-                      isFavorite={ isFavorite }
-                    />);
-                })}
-              </div>
-            </main>)}
-      </main>
+        <main data-testid="page-album" className="album">
+          {loading
+            ? <Loading className="album" />
+            : (
+              <>
+                <div className="album-container">
+                  <AlbumCard album={ albumInfo } />
+                </div>
+                <div className="music-board">
+                  {musics.map((music) => {
+                    const isFavorite = favoriteSongs.some(({ trackId }) => (
+                      trackId === music.trackId));
+                    return (
+                      <MusicCard
+                        key={ music.trackId }
+                        music={ music }
+                        updateFavorites={ this.updateFavorites }
+                        isFavorite={ isFavorite }
+                      />);
+                  })}
+                </div>
+              </>)}
+        </main>
+      </>
     );
   }
 }
