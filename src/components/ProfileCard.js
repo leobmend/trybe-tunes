@@ -15,6 +15,7 @@ class ProfileCard extends React.Component {
             className="profile-img"
             src={ profilePicture }
             alt={ name }
+            data-testid="profile-image"
           />
           <Link to="/profile/edit">Editar perfil</Link>
         </div>
