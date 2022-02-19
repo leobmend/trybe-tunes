@@ -3,6 +3,7 @@ import PropTypes, { oneOfType } from 'prop-types';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
+import defaultProfilePic from '../images/default-profile.svg';
 
 class ProfileEdit extends React.Component {
   constructor() {
@@ -49,15 +50,16 @@ class ProfileEdit extends React.Component {
     const { name, email, image, description, loading } = this.state;
     const saveBtnDisabled = !(name.length && email.length
       && image.length && email.match(/^[\w.-]+[@][\w.]+[.][\w.]+$/));
+    const profileImage = image.length ? image : defaultProfilePic;
     return (
       <div data-testid="page-profile-edit">
         <Header />
         {loading
-          ? <Loading />
+          ? <Loading className="profile" />
           : (
-            <form>
-              <div>
-                <img src={ image } alt={ name } />
+            <form className="profile">
+              <div className="img-container">
+                <img className="profile-img" src={ profileImage } alt={ name } />
                 <label htmlFor="image">
                   <input
                     type="text"
@@ -68,7 +70,7 @@ class ProfileEdit extends React.Component {
                   />
                 </label>
               </div>
-              <label htmlFor="name">
+              <label className="profile-item-container" htmlFor="name">
                 <h3>Nome</h3>
                 <p>Fique a vontade para utilizar seu nome social</p>
                 <input
@@ -79,7 +81,7 @@ class ProfileEdit extends React.Component {
                   onChange={ this.handleChange }
                 />
               </label>
-              <label htmlFor="text">
+              <label className="profile-item-container" htmlFor="text">
                 <h3>E-mail</h3>
                 <p>Escolha um e-mail que consulte diariamente.</p>
                 <input
@@ -90,7 +92,7 @@ class ProfileEdit extends React.Component {
                   onChange={ this.handleChange }
                 />
               </label>
-              <label htmlFor="description">
+              <label className="profile-item-container" htmlFor="description">
                 <h3>Descrição</h3>
                 <input
                   type="text"
