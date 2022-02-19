@@ -43,18 +43,21 @@ class Favorites extends React.Component {
     return (
       <div data-testid="page-favorites">
         <Header />
-        {loading
-          ? <Loading />
-          : (
-            <main>
-              {favoriteSongs.map((music) => (
-                <MusicCard
-                  key={ music.trackId }
-                  music={ music }
-                  updateFavorites={ this.updateFavorites }
-                  isFavorite
-                />))}
-            </main>)}
+        <main className="favorites">
+          {loading
+            ? <Loading className="favorites" />
+            : (
+              <>
+                {favoriteSongs.map((music) => (
+                  <MusicCard
+                    key={ music.trackId }
+                    music={ music }
+                    updateFavorites={ this.updateFavorites }
+                    isFavorite
+                  />))}
+              </>
+            )}
+        </main>
       </div>
     );
   }
