@@ -28,7 +28,7 @@ class Profile extends React.Component {
       <div data-testid="page-profile">
         <Header />
         {loading
-          ? <Loading />
+          ? <Loading className="profile" />
           : (
             <ProfileCard user={ user } />
           )}

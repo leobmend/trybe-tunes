@@ -1,29 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import defaultProfilePic from '../images/default-profile.svg';
 
 class ProfileCard extends React.Component {
   render() {
     const { user: { name, email, image, description } } = this.props;
+    const profilePicture = image.length ? image : defaultProfilePic;
+
     return (
-      <div>
-        <div>
-          <img src={ image } alt={ name } data-testid="profile-image" />
+      <main className="profile">
+        <div className="img-container">
+          <img
+            className="profile-img"
+            src={ profilePicture }
+            alt={ name }
+          />
           <Link to="/profile/edit">Editar perfil</Link>
         </div>
-        <div>
+        <div className="profile-item-container">
           <h3>Nome</h3>
           <p>{ name }</p>
         </div>
-        <div>
+        <div className="profile-item-container">
           <h3>E-mail</h3>
           <p>{ email }</p>
         </div>
-        <div>
+        <div className="profile-item-container">
           <h3>Descrição</h3>
           <p>{ description }</p>
         </div>
-      </div>
+      </main>
     );
   }
 }
