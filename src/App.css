@@ -121,7 +121,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 25px 0;
+  padding: 20px 0;
 }
 
 .title-container h1 {
@@ -179,7 +179,7 @@ header {
   font-size: 2.5em;
   font-weight: 900;
   margin: auto;
-  padding: 20px;
+  padding: 15px;
   text-decoration: none;
 }
 
