@@ -39,7 +39,7 @@ button {
 
 .logo-container {
   align-items: center;
-  background-color: #3c9b73;
+  background-image: linear-gradient(75deg, rgba(52, 133, 73, 1) 38%, rgba(0, 204, 68, 1) 109%);
   border: 10px solid white;
   border-radius: 100%;
   box-shadow: 0 4px 8px 0 black;
@@ -58,6 +58,7 @@ button {
 
 .login-container {
   align-items: center;
+  background-color: #081c15;
   border: 5px solid white;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 black;
@@ -116,7 +117,7 @@ header {
 
 .title-container {
   align-items: center;
-  background-color: #20503c;
+  background-image: linear-gradient(90deg, rgb(114, 199, 138) 38%, rgba(0, 204, 68, 0.5) 109%);
   border-right: 1px solid white;
   display: flex;
   flex-wrap: wrap;
