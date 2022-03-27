@@ -58,6 +58,7 @@ class Search extends React.Component {
                 data-testid="search-artist-input"
                 placeholder="Pesquise seu artista"
                 name="searchInput"
+                autoComplete="off"
                 value={ searchInput }
                 onChange={ this.handleChange }
               />
