@@ -65,6 +65,7 @@ class ProfileEdit extends React.Component {
                     type="text"
                     data-testid="edit-input-image"
                     name="image"
+                    autoComplete="off"
                     value={ image }
                     onChange={ this.handleChange }
                   />
@@ -77,6 +78,7 @@ class ProfileEdit extends React.Component {
                   type="text"
                   data-testid="edit-input-name"
                   name="name"
+                  autoComplete="off"
                   value={ name }
                   onChange={ this.handleChange }
                 />
@@ -88,6 +90,7 @@ class ProfileEdit extends React.Component {
                   type="email"
                   data-testid="edit-input-email"
                   name="email"
+                  autoComplete="off"
                   value={ email }
                   onChange={ this.handleChange }
                 />
@@ -98,6 +101,7 @@ class ProfileEdit extends React.Component {
                   type="text"
                   data-testid="edit-input-description"
                   name="description"
+                  autoComplete="off"
                   value={ description }
                   onChange={ this.handleChange }
                 />

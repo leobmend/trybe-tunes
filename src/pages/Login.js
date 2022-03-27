@@ -31,6 +31,7 @@ class Login extends React.Component {
                     type="text"
                     data-testid="login-name-input"
                     name="userName"
+                    autoComplete="off"
                     value={ userName }
                     onChange={ handleChange }
                   />
