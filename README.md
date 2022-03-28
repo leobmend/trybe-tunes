@@ -6,7 +6,7 @@ A aplicação Trybe Tunes nasceu a partir do projeto de mesmo nome, realizado du
 
 A proposta do projeto era construir uma aplicação que consultava dados de músicas e álbuns através da consulta à [API pública do Itunes](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/). 
 
-Permitindo ao usuário buscar pelo nome do artista, acessar os albuns deste, favoritas e desfavoritas músicas, além claro de reproduzí-las (esta API pública do Itunes apresenta **recortes das canções de 30 seg cada**). Para concluir, a aplicação também permite a edição do perfil do usuário.
+Permitindo ao usuário buscar pelo nome do artista, acessar os albuns deste, favoritar e desfavoritar suas músicas, além claro de reproduzí-las (esta API pública do Itunes apresenta **recortes das canções de 30 seg cada**). Para concluir, a aplicação também permite a edição do perfil do usuário.
 
 ## Tecnologias
 
