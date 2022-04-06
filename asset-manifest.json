@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/trybe-tunes/static/css/main.fe9c7589.chunk.css",
+    "main.js": "/trybe-tunes/static/js/main.b461867b.chunk.js",
+    "main.js.map": "/trybe-tunes/static/js/main.b461867b.chunk.js.map",
+    "runtime-main.js": "/trybe-tunes/static/js/runtime-main.e4c476e7.js",
+    "runtime-main.js.map": "/trybe-tunes/static/js/runtime-main.e4c476e7.js.map",
+    "static/js/2.870d2381.chunk.js": "/trybe-tunes/static/js/2.870d2381.chunk.js",
+    "static/js/2.870d2381.chunk.js.map": "/trybe-tunes/static/js/2.870d2381.chunk.js.map",
+    "index.html": "/trybe-tunes/index.html",
+    "static/css/main.fe9c7589.chunk.css.map": "/trybe-tunes/static/css/main.fe9c7589.chunk.css.map",
+    "static/js/2.870d2381.chunk.js.LICENSE.txt": "/trybe-tunes/static/js/2.870d2381.chunk.js.LICENSE.txt",
+    "static/media/default-profile.055e3178.svg": "/trybe-tunes/static/media/default-profile.055e3178.svg",
+    "static/media/earphones.a61e0e4b.svg": "/trybe-tunes/static/media/earphones.a61e0e4b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e4c476e7.js",
+    "static/js/2.870d2381.chunk.js",
+    "static/css/main.fe9c7589.chunk.css",
+    "static/js/main.b461867b.chunk.js"
+  ]
+}
