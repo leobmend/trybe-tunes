@@ -17,6 +17,7 @@ class Search extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleEnterKey = this.handleEnterKey.bind(this);
   }
 
   handleChange(event) {
@@ -42,6 +43,12 @@ class Search extends React.Component {
       })));
   }
 
+  handleEnterKey(event, searchBtnDisabled) {
+    if (event.key === 'Enter' && !searchBtnDisabled ) {
+      this.handleClick();
+    }
+  }
+
   render() {
     const MIN_LENGTH = 2;
     const { searchInput, artistSearch,
@@ -51,7 +58,7 @@ class Search extends React.Component {
       <>
         <Header />
         <main className="search" data-testid="page-search">
-          <form className="search-form">
+          <form className="search-form" onSubmit={ (event) => event.preventDefault() }>
             <label htmlFor="searchInput">
               <input
                 type="text"
@@ -60,6 +67,7 @@ class Search extends React.Component {
                 name="searchInput"
                 autoComplete="off"
                 value={ searchInput }
+                onKeyDown={ (event) => this.handleEnterKey(event, searchBtnDisabled) }
                 onChange={ this.handleChange }
               />
             </label>
