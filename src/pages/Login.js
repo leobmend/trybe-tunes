@@ -6,8 +6,9 @@ import earphonesImg from '../images/earphones.svg';
 class Login extends React.Component {
   render() {
     const MIN_LENGTH = 3;
-    const { userName, handleChange, handleClick, loading } = this.props;
+    const { userName, handleChange, handleClick, handleEnterKey, loading } = this.props;
     const loginBtnDisabled = userName.length < MIN_LENGTH;
+
     return (
       <main className="login" data-testid="page-login">
         <div className="logo-container">
@@ -24,7 +25,7 @@ class Login extends React.Component {
           {loading
             ? <Loading className="login" />
             : (
-              <form className="login-form">
+              <form className="login-form" onSubmit={ (event) => event.preventDefault() }>
                 <label htmlFor="userName">
                   Usuário
                   <input
@@ -34,6 +35,7 @@ class Login extends React.Component {
                     autoComplete="off"
                     value={ userName }
                     onChange={ handleChange }
+                    onKeyDown={ (event) => handleEnterKey(event, loginBtnDisabled) }
                   />
                 </label>
                 <button
@@ -56,6 +58,7 @@ Login.propTypes = {
   userName: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleClick: PropTypes.func.isRequired,
+  handleEnterKey: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
 };
 

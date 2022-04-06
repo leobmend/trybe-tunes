@@ -21,6 +21,7 @@ class App extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleEnterKey = this.handleEnterKey.bind(this);
   }
 
   handleClick() {
@@ -38,6 +39,12 @@ class App extends React.Component {
     });
   }
 
+  handleEnterKey(event, loginBtnDisabled) {
+    if (event.key === 'Enter' && !loginBtnDisabled) {
+      this.handleClick();
+    }
+  }
+
   render() {
     const { loggedIn } = this.state;
     return (
@@ -49,6 +56,7 @@ class App extends React.Component {
                 { ...this.state }
                 handleChange={ this.handleChange }
                 handleClick={ this.handleClick }
+                handleEnterKey={ this.handleEnterKey }
               />
             )}
           </Route>
