@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/trybe-tunes/static/css/main.74b976f6.chunk.css",
+    "main.css": "/trybe-tunes/static/css/main.73595a3f.chunk.css",
     "main.js": "/trybe-tunes/static/js/main.9fd535fb.chunk.js",
     "main.js.map": "/trybe-tunes/static/js/main.9fd535fb.chunk.js.map",
     "runtime-main.js": "/trybe-tunes/static/js/runtime-main.e4c476e7.js",
@@ -8,7 +8,7 @@
     "static/js/2.870d2381.chunk.js": "/trybe-tunes/static/js/2.870d2381.chunk.js",
     "static/js/2.870d2381.chunk.js.map": "/trybe-tunes/static/js/2.870d2381.chunk.js.map",
     "index.html": "/trybe-tunes/index.html",
-    "static/css/main.74b976f6.chunk.css.map": "/trybe-tunes/static/css/main.74b976f6.chunk.css.map",
+    "static/css/main.73595a3f.chunk.css.map": "/trybe-tunes/static/css/main.73595a3f.chunk.css.map",
     "static/js/2.870d2381.chunk.js.LICENSE.txt": "/trybe-tunes/static/js/2.870d2381.chunk.js.LICENSE.txt",
     "static/media/default-profile.055e3178.svg": "/trybe-tunes/static/media/default-profile.055e3178.svg",
     "static/media/earphones.a61e0e4b.svg": "/trybe-tunes/static/media/earphones.a61e0e4b.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.e4c476e7.js",
     "static/js/2.870d2381.chunk.js",
-    "static/css/main.74b976f6.chunk.css",
+    "static/css/main.73595a3f.chunk.css",
     "static/js/main.9fd535fb.chunk.js"
   ]
 }
