@@ -48,7 +48,7 @@ class App extends React.Component {
   render() {
     const { loggedIn } = this.state;
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/">
             {loggedIn ? <Redirect to="/search" /> : (

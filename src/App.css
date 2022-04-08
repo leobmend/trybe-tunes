@@ -29,7 +29,7 @@ button {
 /* LOGIN */
 .login {
   align-items: center;
-  background-image: linear-gradient(45deg, rgb(23, 61, 33) 38%, rgb(29, 182, 80) 109%);;
+  background-image: linear-gradient(45deg, rgb(23, 61, 33) 38%, rgb(116, 163, 132) 109%);;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -58,7 +58,7 @@ button {
 
 .login-container {
   align-items: center;
-  background-color: #081c15;
+  background-color: #124231;
   border: 5px solid white;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 black;
