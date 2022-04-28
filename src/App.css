@@ -71,8 +71,16 @@ button {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  padding: 20px;
-  width: 40vw;
+  padding: 30px 20px;
+  width: 90vw;
+}
+
+@media screen and ( min-width : 500px ) {
+  
+  .login-container {
+    width: 40vw;
+    padding: 40px 20px;
+  }
 }
 
 .login-container h1 {
@@ -86,21 +94,39 @@ button {
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .login-form label {
   align-items: center;
   color: white;
   display: flex;
+  flex-direction: column;
   font-size: 1.9em;
   font-weight: 600;
+  justify-content: center;
   margin-bottom: 10px;
+  width: 100%;
+}
+
+@media screen and ( min-width : 1000px ) {
+  
+  .login-form label {
+    flex-direction: row;
+  }
 }
 
 .login-form input {
   font-size: 0.9em;
-  width: 350px;
+  width: 85%;
   font-weight: 600;
+}
+
+@media screen and ( min-width : 1000px ) {
+  
+  .login-form input {
+    width: 65%;
+  }
 }
 
 .login-form button {
@@ -136,20 +162,45 @@ header {
 .title-container {
   align-items: center;
   background-image: linear-gradient(90deg, rgb(114, 199, 138) 38%, rgba(0, 204, 68, 0.5) 109%);
-  border-right: 1px solid white;
+  border-bottom: 1px solid white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
+  width: 100%;
+}
+
+@media screen and ( min-width : 550px ) {
+  
+  .title-container {
+    border-bottom: none;
+    border-right: 1px solid white;
+    padding: 20px 0;
+    width: auto;
+  }
 }
 
 .title-container h1 {
-  font-size: 4.2em;
+  font-size: 2.8em;
+}
+
+@media screen and ( min-width : 500px ) {
+  
+  .title-container h1 {
+    font-size: 4.2em;
+  }
 }
 
 .earphone-img {
   margin: 0 8px;
-  width: 45px;
+  width: 38px;
+}
+
+@media screen and ( min-width : 500px ) {
+  
+  .earphone-img {
+    width: 45px;
+  }
 }
 
 .title-container h1:nth-of-type( 2 ) {
@@ -160,28 +211,56 @@ header {
 .user-container {
   align-items: center;
   display: flex;
-  margin-right: 10px;
+  justify-content: center;
   padding: 8px 0;
+  width: 100%;
+}
+
+@media screen and ( min-width : 550px ) {
+  
+  .user-container {
+    margin-right: 20px;
+    width: auto;
+  }
 }
 
 .user-container h2 {
   color: white;
-  font-size: 2.3em;
+  font-size: 2em;
+}
+
+@media screen and ( min-width : 500px ) {
+  
+  .user-container h2 {
+    font-size: 2.3em;
+  }
 }
 
 .user-container .profile-img {
   border: 2px solid white;
   border-radius: 100%;
-  height: 100px;
-  margin: 10px 20px;
-  width: 100px;
+  height: 80px;
+  margin: 5px 20px;
+  width: 80px;
+}
+
+@media screen and ( min-width : 500px ) {
+  
+  .user-container .profile-img {
+    height: 100px;
+    margin: 10px 20px;
+    width: 100px;
+  }
 }
 
 .user-loading {
-  align-self: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 2.3em;
   margin: 0 20px;
+  min-height: 90px;
 }
 
 .links-container {
@@ -191,15 +270,23 @@ header {
   display: flex;
   flex-basis: 100%;
   justify-content: center;
+  width: 100vw;
 }
 
 .links-container a {
   color: rgb(225, 225, 225);
-  font-size: 2.5em;
+  font-size: 1.8em;
   font-weight: 900;
   margin: auto;
   padding: 15px;
   text-decoration: none;
+}
+
+@media screen and ( min-width : 500px ) {
+  
+  .links-container a {
+    font-size: 2.5em;
+  }
 }
 
 /* SEARCH */
@@ -213,17 +300,40 @@ header {
   align-items: center;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 25px;
   padding: 20px;
-  width: 40vw;
+  width: 80vw;
+}
+
+@media screen and ( min-width : 1000px ) {
+  
+  .search-form {
+    width: 40vw;
+    flex-direction: row;
+  }
+}
+
+.search-form label {
+  width: 100%;
 }
 
 .search-form input {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   font-size: 2em;
   font-weight: 600;
-  width: 300px;
+  margin-left: 0;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+@media screen and ( min-width : 1000px ) {
+  
+  .search-form input {
+    margin-bottom: 0;
+    width: 300px;
+  }
 }
 
 .search-form input::placeholder {
@@ -238,7 +348,14 @@ header {
   margin-left: 10px;
   padding: 2px 0;
   transition: 0.9s;
-  width: 30%;
+  width: 60%;
+}
+
+@media screen and ( min-width : 500px ) {
+  
+  .search-form button {
+    width: 40%;
+  }
 }
 
 .search-form button:disabled {
@@ -269,10 +386,17 @@ header {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   flex-basis: 90%;
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 40px;
   padding: 20px;
   text-align: center;
+}
+
+@media screen and ( min-width : 500px ) {
+  
+  .albums-board h2 {
+    font-size: 3em;
+  }
 }
 
 .album-card {
@@ -306,9 +430,18 @@ header {
 .album {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 50px 40px;
+  padding: 35px 20px;
   width: 100vw;
+}
+
+@media screen and ( min-width : 1000px ) {
+  
+  .album {
+    flex-direction: row;
+    padding: 50px 40px;
+  }
 }
 
 .album-loading {
@@ -318,7 +451,14 @@ header {
 
 .album .album-container {
   display: flex;
-  width: 20%;
+  width: 100%;
+}
+
+@media screen and ( min-width : 1000px ) {
+  
+  .album .album-container {
+    width: 20%;
+  }
 }
 
 .album .album-card {
@@ -340,7 +480,13 @@ header {
   flex-direction: column;
   margin: auto;
   padding: 10px;
-  width: 320px;
+}
+
+@media screen and ( min-width : 1000px ) {
+  
+  .music-card {
+    width: 320px;
+  }
 }
 
 .music-card p {
@@ -353,6 +499,14 @@ header {
 .music-card audio {
   border-radius: 30px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 275px;
+}
+
+@media screen and ( min-width : 1000px ) {
+  
+  .music-card audio {
+    width: 300px;
+  }
 }
 
 .music-card label {
@@ -383,10 +537,18 @@ header {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  min-height: 80vh;
   justify-content: center;
-  overflow-y: auto;
-  padding: 25px 30vw;
+  margin: auto;
+  padding: 25px 30px;
+  width: 95%;
+}
+
+@media screen and ( min-width : 500px ) {
+ 
+  .profile {
+    width: 80%;
+  }
 }
 
 .profile-loading {
@@ -396,7 +558,6 @@ header {
 }
 
 .profile > * {
-  margin: auto;
   width: 100%;
 }
 
@@ -408,6 +569,14 @@ header {
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
+  margin: 10px;
+}
+
+@media screen and ( min-width : 1500px ) {
+  
+  .profile .img-container {
+    margin: 20px;
+  }
 }
 
 .profile .profile-img {
@@ -433,8 +602,16 @@ header {
   border: 2.5px solid #1b4332;
   border-radius: 10px;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and ( min-width : 1500px ) {
+  
+  .profile .profile-item-container {
+    margin: 20px;
+  }
 }
 
 .profile .profile-item-container h3 {
@@ -450,7 +627,8 @@ header {
 
 .profile input {
   background-color: whitesmoke;
-  margin: 5px;
+  margin: 10px auto;
+  width: 90%;
 }
 
 .profile button {
