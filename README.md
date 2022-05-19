@@ -8,6 +8,10 @@ A proposta do projeto era construir uma aplicação que consultava dados de mús
 
 Permitindo ao usuário buscar pelo nome do artista, acessar os albuns deste, favoritar e desfavoritar suas músicas, além claro de reproduzí-las (esta API pública do Itunes apresenta **recortes das canções de 30 seg cada**). Para concluir, a aplicação também permite a edição do perfil do usuário.
 
+## Teste você mesmo!
+
+A aplicação está em produção [aqui](https://leobmend.github.io/trybe-tunes/)! Caso se interesse, meus outros projetos estão disponíveis em meu [portfolio](https://leobmend.github.io). 
+
 ## Tecnologias
 
 Durante o desenvolvimento da aplicação, foram utilizados:
